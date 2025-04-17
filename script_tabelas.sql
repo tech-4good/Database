@@ -104,7 +104,7 @@ CREATE TABLE voluntario(
     telefone VARCHAR(11),
     senha VARCHAR(50),
     email VARCHAR(80),
-    cargo VARCHAR(30)
+    administrador BOOLEAN
 );
 
 CREATE TABLE cesta(
