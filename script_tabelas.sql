@@ -80,8 +80,8 @@ CREATE TABLE tipo_morador(
 CREATE TABLE filho_beneficiado(
 	id_filho_beneficiado INT,
     data_nascimento DATE NOT NULL,
-    is_estudante BOOLEAN NOT NULL,
-    has_creche BOOLEAN NOT NULL,
+    is_estudante TINYINT NOT NULL,
+    has_creche TINYINT NOT NULL,
     fk_beneficiado INT,
     fk_cpf CHAR(11),
     fk_endereco INT,
@@ -104,7 +104,7 @@ CREATE TABLE voluntario(
     telefone VARCHAR(11),
     senha VARCHAR(50),
     email VARCHAR(80),
-    administrador BOOLEAN
+    administrador TINYINT
 );
 
 CREATE TABLE cesta(
