@@ -38,12 +38,13 @@ CREATE TABLE beneficiado(
 	religiao VARCHAR(40),
 	quantidade_dependentes INT NOT NULL,
 	foto_beneficiado MEDIUMBLOB,
-    fk_conjuge INT,
+    -- fk_conjuge INT,
     fk_endereco INT,
-    FOREIGN KEY (fk_conjuge) REFERENCES beneficiado(id_beneficiado),
+    -- FOREIGN KEY (fk_conjuge) REFERENCES beneficiado(id_beneficiado),
     FOREIGN KEY (fk_endereco) REFERENCES endereco(id_endereco),
     PRIMARY KEY (id_beneficiado, cpf, fk_endereco)
-);
+)
+auto_increment = 1;
 
 CREATE TABLE auxilio_governamental(
 	id_auxilio INT PRIMARY KEY,
@@ -103,8 +104,7 @@ CREATE TABLE voluntario(
     telefone VARCHAR(11),
     senha VARCHAR(50),
     email VARCHAR(80),
-    fk_administrador INT,
-    FOREIGN KEY (fk_administrador) REFERENCES voluntario(id_voluntario)
+    cargo VARCHAR(30)
 );
 
 CREATE TABLE cesta(
