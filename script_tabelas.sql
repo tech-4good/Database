@@ -1,3 +1,4 @@
+drop database if exists tech4good;
 create database tech4good;
 use tech4good;
 
@@ -5,7 +6,7 @@ use tech4good;
 -- CRIAÇÃO DE TABELAS NA ORDEM CORRETA (BASTA RODAR SCRIPT COMPLETO)
 
 CREATE TABLE endereco(
-	id_endereco INT PRIMARY KEY,
+	id_endereco INT PRIMARY KEY AUTO_INCREMENT,
     cep CHAR(8) NOT NULL,
     logradouro VARCHAR(100) NOT NULL,
     numero INT NOT NULL,
@@ -22,7 +23,7 @@ CREATE TABLE endereco(
 );
 
 CREATE TABLE beneficiado(
-	id_beneficiado INT,
+	id_beneficiado INT AUTO_INCREMENT,
 	cpf CHAR(11) UNIQUE,
 	nome VARCHAR(100) NOT NULL,
 	rg VARCHAR(9) NOT NULL,
