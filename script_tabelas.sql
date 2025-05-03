@@ -109,10 +109,11 @@ CREATE TABLE voluntario(
 );
 
 insert into voluntario(nome, cpf, telefone, senha, email) values
-('Maria', '11122233300', '11917176262', 'senhaSegura@123', 'maria.silva@tech4good.org');
+('Maria', '11122233300', '11917176262', '$2a$12$olbYENKfstBLb0G8CueY1OGBmfusjuiV8F/5V5SVrFhTaj9qAviM2', 'maria.silva@tech4good.org');
 
 select * from voluntario;
-
+select * from voluntario;
+delete from voluntario where id_voluntario = 1;
 
 CREATE TABLE cesta(
 	id_cesta INT PRIMARY KEY,
