@@ -99,14 +99,20 @@ CREATE TABLE fila_espera(
 );
 
 CREATE TABLE voluntario(
-	id_voluntario INT PRIMARY KEY,
+	id_voluntario INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100),
     cpf CHAR(11),
     telefone VARCHAR(11),
-    senha VARCHAR(50),
+    senha VARCHAR(255),
     email VARCHAR(80),
     administrador TINYINT
 );
+
+insert into voluntario(nome, cpf, telefone, senha, email) values
+('Maria', '11122233300', '11917176262', 'senhaSegura@123', 'maria.silva@tech4good.org');
+
+select * from voluntario;
+
 
 CREATE TABLE cesta(
 	id_cesta INT PRIMARY KEY,
